@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-GPLv3-blue)](LICENSE)
 [![Discord](https://img.shields.io/discord/780343356776513556?color=%237289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/MaQE4QerkE)
+![GitHub Latest Pre-Release)](https://img.shields.io/github/v/release/OpenIW/OpenIW?include_prereleases&label=pre-release&logo=github)  
 
 *(Legal copy required, game resources are not provided.)*
 
