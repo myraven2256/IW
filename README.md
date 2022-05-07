@@ -16,6 +16,8 @@ Official releases will not be available until the project reaches a playable sta
 [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/fr/vs/)  
 [CMake](https://cmake.org/)  
 
+*If you are using a different drive for Steam, be sure to modify CMAKE_INSTALL_PREFIX accordingly.*
+
 ![alt text](docs/screenshots/2022-05-02.png "CMake 3.23.1")
 
 # Documentation
