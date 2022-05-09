@@ -2,6 +2,7 @@
 
 static main()
 {
+  MakeName(0x5C93C0, "WinMain");
   MakeName(0x452140, "sub_452140");
   MakeName(0x522650, "sub_522650");
   MakeName(0x59B7D0, "sub_59B7D0");
@@ -1819,7 +1820,7 @@ static main()
   MakeName(0x5C3ED0, "sub_5C3ED0");
   MakeName(0x4B3DD0, "sub_4B3DD0");
   MakeName(0x44C860, "sub_44C860");
-  MakeName(0x4335A0, "sub_4335A0");
+  MakeName(0x4335A0, "R_WaitWorkerCmds");
   MakeName(0x44C800, "sub_44C800");
   MakeName(0x5731A0, "sub_5731A0");
   MakeName(0x5B3DA0, "sub_5B3DA0");
@@ -2498,7 +2499,7 @@ static main()
   MakeName(0x4B25E0, "sub_4B25E0");
   MakeName(0x4C24E0, "sub_4C24E0");
   MakeName(0x522ED0, "sub_522ED0");
-  MakeName(0x58BE50, "sub_58BE50");
+  MakeName(0x58BE50, "SV_WaitServer");
   MakeName(0x412FB0, "sub_412FB0");
   MakeName(0x4E22B0, "sub_4E22B0");
   MakeName(0x532DC0, "sub_532DC0");
@@ -3092,7 +3093,7 @@ static main()
   MakeName(0x623230, "sub_623230");
   MakeName(0x483800, "sub_483800");
   MakeName(0x4C3C00, "sub_4C3C00");
-  MakeName(0x4F3F00, "sub_4F3F00");
+  MakeName(0x4F3F00, "DB_LoadXAssets");
   MakeName(0x5A3A10, "sub_5A3A10");
   MakeName(0x623B80, "sub_623B80");
   MakeName(0x573720, "sub_573720");
@@ -5302,7 +5303,7 @@ static main()
   MakeName(0x522A30, "sub_522A30");
   MakeName(0x562590, "sub_562590");
   MakeName(0x572490, "sub_572490");
-  MakeName(0x58BAB0, "sub_58BAB0");
+  MakeName(0x58BAB0, "SV_AllowPackets");
   MakeName(0x412B30, "sub_412B30");
   MakeName(0x4D2730, "sub_4D2730");
   MakeName(0x5F2E80, "sub_5F2E80");
@@ -5452,7 +5453,7 @@ static main()
   MakeName(0x5F9DE0, "sub_5F9DE0");
   MakeName(0x4795C0, "sub_4795C0");
   MakeName(0x5496B0, "sub_5496B0");
-  MakeName(0x5694B0, "sub_5694B0");
+  MakeName(0x5694B0, "Com_InitPreXAssets");
   MakeName(0x5C9AC0, "sub_5C9AC0");
   MakeName(0x4290A0, "sub_4290A0");
   MakeName(0x48AA20, "sub_48AA20");
@@ -10142,4 +10143,8 @@ static main()
   MakeName(0x4C78B0, "sub_4C78B0");
   MakeName(0x5B79B0, "sub_5B79B0");
   MakeName(0x5B79D0, "sub_5B79D0");
+
+
+  MakeName(0x1B8F1B0, "com_sv_running");
+
 }

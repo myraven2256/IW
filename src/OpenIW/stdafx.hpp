@@ -22,7 +22,7 @@
 // #include <ctime>                // C-style time/date utilites
 
 // #include <expected>             // std::expected class template (C++23)
-// #include <functional>           // Function objects, Function invocations, Bind operations and Reference wrappers
+#include <functional>              // Function objects, Function invocations, Bind operations and Reference wrappers
 // #include <initializer_list>     // std::initializer_list class template (C++11)
 // #include <optional>             // std::optional class template (C++17)
 // #include <source_location>      // Supplies means to obtain source code location (C++20)
@@ -142,3 +142,9 @@
 // #include <thread>               // std::thread class and supporting functions (C++11)
 
 // using namespace std::literals;
+
+template <typename T>
+std::function<T> cast(std::uintptr_t address)
+{
+  return std::function<T>(reinterpret_cast<T*>(address));
+}

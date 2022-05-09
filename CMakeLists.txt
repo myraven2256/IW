@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.23.1 FATAL_ERROR)
 project(OpenIW LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 17)
 
 option(CMAKE_SUBMODULES "Initialize submodules in the repository." ON)
 option(CMAKE_VCXPROJ_FILTERS "Initialize vcxproj.filters in the solution." ON)
@@ -28,9 +27,9 @@ function(target_vcxproj_filters target)
   endif()
 endfunction()
 
-# Disable in-source builds to avoid cluttering the source tree with generated CMake files.
+# Disable in-source builds.
 if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_SOURCE_DIR}")
-  message(FATAL_ERROR "In-source builds are disabled to avoid cluttering the source tree with generated CMake files. Please create a build subdirectory and use `cmake ..` inside it.\n" "NOTE: You must delete both CMakeCache.txt and CMakeFiles/* before continuing.")
+  message(FATAL_ERROR "In-source builds are disabled. Please create a build subdirectory and use `cmake ..` inside it.\n" "NOTE: You must delete both CMakeCache.txt and CMakeFiles/* before continuing.")
 endif()
 
 add_subdirectory(externals)

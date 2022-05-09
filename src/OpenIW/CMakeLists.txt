@@ -43,7 +43,7 @@ PROPERTIES
   ARCHIVE_OUTPUT_DIRECTORY "${ZYNAMIC_OUT}$<0:>"
   LIBRARY_OUTPUT_DIRECTORY "${ZYNAMIC_OUT}$<0:>"
   RUNTIME_OUTPUT_DIRECTORY "${ZYNAMIC_OUT}$<0:>"
-  VS_DPI_AWARE "PerMonitor"
+  VS_DPI_AWARE              "PerMonitor"
 )
 
 target_vcxproj_filters(OpenIW)
