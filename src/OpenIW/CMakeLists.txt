@@ -6,23 +6,23 @@ add_executable(OpenIW
   stdafx.hpp
 )
 
-set_target_properties(OpenIW
-PROPERTIES
-    PDB_OUTPUT_DIRECTORY "${CMAKE_INSTALL_PREFIX}$<0:>"
-    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_INSTALL_PREFIX}$<0:>"
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_INSTALL_PREFIX}$<0:>"
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_INSTALL_PREFIX}$<0:>"
-)
-
-set_property(TARGET OpenIW 
-PROPERTY 
-  VS_DPI_AWARE "PerMonitor"
-)
-
-
 target_include_directories(OpenIW
+PRIVATE .
+  "C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include"
+)
+
+target_link_directories(OpenIW
 PRIVATE
-  .
+  "C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Lib/x86"
+)
+
+target_link_libraries(OpenIW
+  Zynamic
+)
+
+target_link_options(OpenIW
+PRIVATE
+  /DYNAMICBASE:NO /NXCOMPAT:NO /SAFESEH:NO /INCREMENTAL:NO /LARGEADDRESSAWARE /LAST:.text
 )
 
 target_precompile_headers(OpenIW
@@ -32,16 +32,18 @@ PRIVATE
 
 target_compile_options(OpenIW
 PRIVATE
-  /FIstdafx.hpp
+  /MP # Enable parallel (aka multi-processor, aka multi-core) build.
+  /Zi # Enable symbolic debugging information.
+  /FIstdafx.hpp # Force include stdafx.
 )
 
-target_link_options(OpenIW
-PRIVATE
-  /DYNAMICBASE:NO /NXCOMPAT:NO /SAFESEH:NO /INCREMENTAL:NO /LARGEADDRESSAWARE /LAST:.text
+set_target_properties(OpenIW
+PROPERTIES
+  PDB_OUTPUT_DIRECTORY     "${ZYNAMIC_OUT}$<0:>"
+  ARCHIVE_OUTPUT_DIRECTORY "${ZYNAMIC_OUT}$<0:>"
+  LIBRARY_OUTPUT_DIRECTORY "${ZYNAMIC_OUT}$<0:>"
+  RUNTIME_OUTPUT_DIRECTORY "${ZYNAMIC_OUT}$<0:>"
+  VS_DPI_AWARE "PerMonitor"
 )
 
-target_link_libraries(OpenIW
-  Zynamic
-)
-
-target_create_vcxproj_filters(OpenIW)
+target_vcxproj_filters(OpenIW)
