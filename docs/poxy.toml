@@ -1,21 +1,20 @@
 # this is a config file for Poxy - a Doxygen + m.css front-end written in Python.
 # https://github.com/marzer/poxy
 
-name                = 'OpenIW'
-author              = 'OpenIW'
-description         = 'IW Engine for Call of Duty® games.'
-cpp                 = 23
-github              = 'OpenIW/OpenIW'
-license             = [ 'GPLv3', 'https://github.com/OpenIW/OpenIW/blob/master/LICENSE' ]
-favicon             = 'favicon.png'
-navbar              = [ 'namespaces', 'files' ]
-theme               = 'dark'
+name            = 'OpenIW'
+author          = 'OpenIW'
+github          = 'OpenIW/OpenIW'
+description     = 'IW Engine build for modern operating systems.'
+favicon         = 'favicon.png'
+license         = [ 'GPLv3', 'https://github.com/OpenIW/OpenIW/blob/master/LICENSE' ]
+navbar          = [ 'files' ]
 
 [warnings]
-enabled             = true
-undocumented        = true
-treat_as_errors     = false
+enabled         = true
+undocumented    = true
+treat_as_errors = false
 
 [sources]
-recursive_paths     = [ '../src' ]
-patterns            = [ '*.h' , '*.cpp' ]
+recursive_paths = [ '../src' ]
+patterns        = [ '*.hpp' , '*.cpp' ]
+extract_all     = true
