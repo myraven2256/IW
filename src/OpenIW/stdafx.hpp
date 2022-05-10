@@ -65,6 +65,7 @@
 // #include <format>               // Formatting library including std::format (C++20)
 // #include <string>               // std::basic_string class template
 // #include <string_view>          // std::basic_string_view class template (C++17)
+// using namespace std::literals;  // operator""s defined in header <string>
 
 // Containers library
 // #include <array>                // std::array container (C++11)
@@ -73,7 +74,7 @@
 // #include <list>                 // std::list container
 // #include <map>                  // std::map and std::multimap associative containers
 // #include <queue>                // std::queue and std::priority_queue container adaptors
-// #include <set>                  // std::set and std::multiset associative containers
+#include <set>                     // std::set and std::multiset associative containers
 // #include <span>                 // std::span view (C++20)
 // #include <stack>                // std::stack container adaptor
 // #include <unordered_map>        // std::unordered_map and std::unordered_multimap unordered associative containers (C++11)
@@ -122,7 +123,7 @@
 // #include <syncstream>           // std::basic_osyncstream, std::basic_syncbuf, and typedefs (C++20)
 
 // Filesystem library
-// #include <filesystem>           // std::path class and supporting functions (C++17)
+#include <filesystem>              // std::path class and supporting functions (C++17)
 
 // Regular Expressions library
 // #include <regex>                // Classes, algorithms and iterators to support regular expression processing (C++11)
@@ -141,10 +142,19 @@
 // #include <stop_token>           // Stop tokens for std::jthread (C++20)
 // #include <thread>               // std::thread class and supporting functions (C++11)
 
-// using namespace std::literals;
+//
+// Utilities to interact with the binary loaded by Zynamic.
+// At some point, they will be moved to a header file in the
+// Zynamic repository.
+//
+
+namespace Zynamic
+{
 
 template <typename T>
-std::function<T> cast(std::uintptr_t address)
+std::function<T> Forward(std::uintptr_t address)
 {
   return std::function<T>(reinterpret_cast<T*>(address));
 }
+
+} // namespace Zynamic
