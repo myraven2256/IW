@@ -5,8 +5,4 @@ FetchContent_Declare(zynamic
   GIT_TAG main
 )
 
-set(ZYNAMIC_APP "Call of Duty Modern Warfare 2")
-set(ZYNAMIC_SRC "IW4")
-set(ZYNAMIC_OUT "C:/Program Files (x86)/Steam/steamapps/common/Call of Duty Modern Warfare 2")
-
 FetchContent_MakeAvailable(Zynamic)
