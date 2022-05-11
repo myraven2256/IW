@@ -32,9 +32,8 @@ if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_SOURCE_DIR}")
   message(FATAL_ERROR "In-source builds are disabled. Please create a build subdirectory and use `cmake ..` inside it.\n" "NOTE: You must delete both CMakeCache.txt and CMakeFiles/* before continuing.")
 endif()
 
-set(ZYNAMIC_APP "Call of Duty Modern Warfare 2")
-set(ZYNAMIC_SRC "IW4")
 set(ZYNAMIC_OUT "C:/Program Files (x86)/Steam/steamapps/common/Call of Duty Modern Warfare 2")
+set(ZYNAMIC_BIN "IW4")
 
 add_subdirectory(externals)
 add_subdirectory(src)
