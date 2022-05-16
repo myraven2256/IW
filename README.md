@@ -1,4 +1,9 @@
+##### OpenIW was previously built on top of IW4 and was discontinued and handed over to another team with a slightly different approach on [OpenIW4](https://github.com/shit-ware/OpenIW4). This repository may or may not resume with another IW engine, but until a decision is made, it will remain archived. Note that this organization is still alive, check out the latest work on [TL](https://github.com/OpenIW/TL) and [demonware](https://github.com/OpenIW/demonware) with more to come later!
+
+
 # OpenIW
+
+
 
 [![License](https://img.shields.io/badge/License-GPLv3-blue)](LICENSE)
 [![Discord](https://img.shields.io/discord/780343356776513556?color=%237289da&label=Discord&logo=discord&logoColor=white)](https://discord.gg/MaQE4QerkE)
